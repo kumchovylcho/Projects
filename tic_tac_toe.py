@@ -90,6 +90,7 @@ def check_for_tie(game_board):
         print_board(game_board)
         print("Draw!")
         game_is_played = False
+        exit()
 
 
 def check_winner(game_board):
@@ -97,6 +98,8 @@ def check_winner(game_board):
     if check_diagonal(game_board) or check_horizontal(game_board) or check_vertical(game_board):
         print(f"\n\nThe winner is {tic_tac_toe_winner}")
         game_is_played = False
+        print_board(game_board)
+        exit()
 
 
 game_is_played = True
