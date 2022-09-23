@@ -41,7 +41,7 @@ def player_nickname():
     username = input("Enter your nickname: ")
     while len(username) < 1:
         username = input("Enter your nickname: ")
-    player_name = username[0].upper()
+    player_name = username
     print(f"{player_name} {''.join(player_field)}\n\nC {''.join(computer_field)}")
     user_move()
 
@@ -96,7 +96,8 @@ def dice_roller():
 
 def show_positions():
     player_field.insert(player_position, player_name), computer_field.insert(computer_position, 'C')
-    player_tracker = f"{player_field.index(player_name) * ' '}^{(100 - player_field.index(player_name)) * ' '}"
+    length_of_tracker = "^" * len(player_name)
+    player_tracker = f"{player_field.index(player_name) * ' '}{length_of_tracker}{(100 - player_field.index(player_name)) * ' '}"
     computer_tracker = f"{computer_field.index('C') * ' '}^{(100 - computer_field.index('C')) * ' '}"
     print(f"{''.join(player_field)}\n{player_tracker}\n{''.join(computer_field)}\n{computer_tracker}")
     player_field.remove(player_name), computer_field.remove('C')
