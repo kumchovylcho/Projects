@@ -112,7 +112,6 @@ def new_game():
             change_username = input("\nDo you want to change your nickname? [Y] / [N] : ")
             while change_username != 'Y' or change_username != 'N':
                 if change_username == 'Y':
-                    player_name = ''
                     player_nickname()
                 elif change_username == 'N':
                     user_move()
