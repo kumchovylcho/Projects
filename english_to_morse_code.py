@@ -12,7 +12,7 @@ user_input = input().upper()
 result = ''
 for letter in user_input:
     if letter in english_to_morse_code:
-        result += english_to_morse_code[letter] + ' '
+        result += english_to_morse_code[letter] + '  '
     elif letter == ' ':
         result += ' | '
 print(result)
